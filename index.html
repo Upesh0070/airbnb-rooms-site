@@ -2,19 +2,69 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Captain Chaos Airbnb</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stay at Chaos Crib</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <style>
-    body { font-family: sans-serif; margin: 0; padding: 0; background: #f4f4f4; }
-    .container { max-width: 700px; margin: auto; padding: 20px; background: #fff; }
-    img { width: 100%; border-radius: 8px; margin-bottom: 15px; }
+    :root {
+      --primary: #1f2937;
+      --accent: #3b82f6;
+      --bg: #f9fafb;
+      --card-bg: #ffffff;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Poppins', sans-serif; background: var(--bg); color: var(--primary); }
+    .container { width: 90%; max-width: 1200px; margin: auto; padding: 20px; }
+    header { text-align: center; padding: 40px 0; }
+    header h1 { font-size: 2.5rem; font-weight: 600; }
+    header p { margin-top: 8px; font-size: 1.2rem; color: var(--accent); }
+
+    .rooms { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin-top: 30px; }
+    .room-card { background: var(--card-bg); border-radius: 12px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.1); display: flex; flex-direction: column; }
+    .room-card img { width: 100%; height: auto; }
+    .room-card .content { padding: 16px; flex: 1; display: flex; flex-direction: column; }
+    .room-card h2 { font-size: 1.5rem; margin-bottom: 8px; }
+    .room-card p.price { font-size: 1.2rem; font-weight: 600; color: var(--accent); margin-bottom: 12px; }
+    .room-card .features { margin-top: auto; font-size: 0.9rem; color: #555; }
+
+    .cta { display: block; text-align: center; margin: 40px auto; background: var(--accent); color: #fff; padding: 16px 32px; border-radius: 9999px; text-decoration: none; font-weight: 600; width: fit-content; }
+    .cta:hover { opacity: 0.9; }
+
+    footer { text-align: center; margin-top: 40px; font-size: 0.9rem; color: #666; }
   </style>
 </head>
 <body>
   <div class="container">
-    <h1>Stay at Captain Chaos's Crib</h1>
-    <img src="images/room1.jpg" alt="Room">
-    <p>Luxury room with mountain views. ₹1500/night. Fast Wi-Fi. Balcony. Chill AF.</p>
-    <p><a href="https://airbnb.com/yourlisting" target="_blank">Book Now on Airbnb</a></p>
+    <header>
+      <h1>Stay at Chaos Crib</h1>
+      <p>Where comfort meets chaos</p>
+    </header>
+
+    <div class="rooms">
+      <div class="room-card">
+        <img src="images/room1.jpg" alt="Deluxe Room">
+        <div class="content">
+          <h2>Deluxe Room</h2>
+          <p class="price">₹1500 / night</p>
+          <p class="features">🛏️ 1 Queen Bed&nbsp;&nbsp;📶 Fast Wi-Fi&nbsp;&nbsp;🌄 Balcony</p>
+        </div>
+      </div>
+      <div class="room-card">
+        <img src="images/room2.jpg" alt="Basic Room">
+        <div class="content">
+          <h2>Basic Room</h2>
+          <p class="price">₹1200 / night</p>
+          <p class="features">🛏️ 2 Single Beds&nbsp;&nbsp;📶 Fast Wi-Fi&nbsp;&nbsp;🍽️ Kitchen Access</p>
+        </div>
+      </div>
+    </div>
+
+    <a class="cta" href="https://airbnb.com/yourlisting" target="_blank">Book Now on Airbnb</a>
+
+    <footer>
+      📍 Your City &nbsp;&nbsp;|&nbsp;&nbsp; Contact: +91-XXXX-XXXXXX
+    </footer>
   </div>
 </body>
 </html>
+
